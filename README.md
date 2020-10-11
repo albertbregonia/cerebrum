@@ -17,6 +17,7 @@ The main purpose is to allow for a user to be able to connect other computers to
 
 ### Note: If you are to use this software, you must:
 - Understand the basic concepts of networking such as IP addresses and ports.
+- Know that this software works best where the scaling of the host window matches that of the client. 
 
 ## Main Features:
 1. Configurable to be a server or client.
