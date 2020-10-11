@@ -24,3 +24,8 @@ The main purpose is to allow for a user to be able to connect other computers to
 2. Easy to use GUI.
 3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE 1.8+](https://www.java.com/en/) is available.
 4. Able to control a maximum of 10 simulataneous devices.
+
+## RELEASE NOTES AS OF OCT. 10
+- Keyboard input is basic, simple yet-buggy typing (70% accuracy), no key combinations (ie. CTRL+ALT+DEL)
+- No scrolling functionality (besides mouse wheel click-based scrolling)
+- Window Dimension Presets Drop-down will be implemented soon
