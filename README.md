@@ -13,19 +13,18 @@ mouse/keyboard sharing tool. It is named **Cerebrum** as it can act as a hub for
 The main purpose is to allow for a user to be able to connect other computers together and eliminate the need for extra keyboards and mice. 
 ***Thus overall, increasing productivity.***
 
-#### If you know how to port forward, you can ***also*** use this as a remote desktop software if paired with a 3rd-party screen-sharing application.
+#### If you know how to port forward, you can ***ALSO*** use this as a remote desktop software if paired with a 3rd-party screen-sharing application.
 
 ### Note: If you are to use this software, you must:
 - Understand the basic concepts of networking such as IP addresses and ports.
-- Know that this software works best where the scaling of the host window matches that of the client. 
+- Understand that this software works best where the scaling of the host window matches that of the client. 
 
 ## Main Features:
-1. Configurable to be a server or client.
-2. Easy to use GUI.
-3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE 1.8+](https://www.java.com/en/) is available.
-4. Able to control a maximum of 10 simulataneous devices.
+1. Easy to use, simple GUI.
+2. Able to control up to maximum of 10 simulataneous devices.
+3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JDK 11+](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) is available.
 
-## RELEASE NOTES AS OF OCT. 10
+## RELEASE NOTES AS OF OCT. 11
 - Keyboard input is basic, simple yet-buggy typing (70% accuracy), no key combinations (ie. CTRL+ALT+DEL)
 - No scrolling functionality (besides mouse wheel click-based scrolling)
-- Window Dimension Presets Drop-down will be implemented soon
+- Currently only works with Java 11+ although it is compiled for Java 8...
