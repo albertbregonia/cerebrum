@@ -7,6 +7,9 @@ import kanin.cerebrum.utility.Data;
 
 import java.util.ArrayList;
 
+import static kanin.cerebrum.Main.clients;
+
+
 public class MouseHandler implements EventHandler<MouseEvent> {
     
     private final ArrayList<String> last = new ArrayList<>(3);
@@ -16,7 +19,7 @@ public class MouseHandler implements EventHandler<MouseEvent> {
     public MouseHandler(ChannelHandlerContext client){this.client=client;}
     
     @Override //Send mouse data to client
-    public void handle(MouseEvent e) { 
+    public void handle(MouseEvent e) {
         if(!last.isEmpty()){ //Ignores the first event, results in NullPointerException if not
             switch(e.getEventType().getName()){
                 case "MOUSE_MOVED":
@@ -29,8 +32,8 @@ public class MouseHandler implements EventHandler<MouseEvent> {
                     break;
                 case "MOUSE_CLICKED":
                     //if statement included to fix bug where an extra click is simulated after a click and drag
-                    if(!(last.get(last.size()-1).equalsIgnoreCase("MOUSE_RELEASED") && last.get(0).equalsIgnoreCase("MOUSE_DRAGGED"))) 
-                        client.writeAndFlush(new Data(1,e.getButton().name(),null)); //simple click
+                    if(!(last.get(last.size()-1).equalsIgnoreCase("MOUSE_RELEASED") && last.get(0).equalsIgnoreCase("MOUSE_DRAGGED")))
+                        client.writeAndFlush(new Data(1,e.getButton().name(),null));//simple click
                     break;
                 case "MOUSE_DRAGGED":
                     if(last.get(last.size()-1).equalsIgnoreCase("MOUSE_DRAGGED")){

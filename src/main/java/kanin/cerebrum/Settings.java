@@ -30,7 +30,6 @@ public class Settings implements Initializable {
     private static Label ipi;
     
     public static void startup(){
-        disconnect0(); //Can't change settings while a network thread is alive
         panel = new Stage();
         try{
             panel.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(Settings.class.getClassLoader().getResource("settings.fxml")))));
@@ -110,6 +109,7 @@ public class Settings implements Initializable {
     
     @FXML
     private void save() throws IOException {
+        disconnect0(); //Can't change settings while a network thread is alive
         FileOutputStream settings = new FileOutputStream("settings.txt");
         PrintWriter w = new PrintWriter(settings,true);
         w.println(getIP());

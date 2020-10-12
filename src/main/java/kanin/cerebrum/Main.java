@@ -55,7 +55,8 @@ public class Main extends Application implements Initializable {
     }
 
     //Ask for settings on first time use, otherwise simply connect
-    @FXML public void connect() throws IOException{
+    @FXML 
+    public void connect() throws IOException{
         if(!Settings.isConfigured())
             Settings.startup();
         if(Settings.isConfigured())
@@ -71,7 +72,8 @@ public class Main extends Application implements Initializable {
     }
     
     //Disconnect Button
-    @FXML public void disconnect(){disconnect0();}
+    @FXML 
+    public void disconnect(){disconnect0();}
     
     public static void disconnect0(){
         if(current!=null && current.isAlive())
