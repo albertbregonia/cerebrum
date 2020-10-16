@@ -21,7 +21,7 @@ public class KeyHandler implements EventHandler<KeyEvent> {
         switch(e.getEventType().getName()){ //Only handles simple typing as of 10/9/2020
             case "KEY_RELEASED":
                 if(last.get(last.size()-1).equalsIgnoreCase("KEY_TYPED"))
-                    user.writeAndFlush(new Data(4,"",e));
+                    user.writeAndFlush(new Data(4,e.getText(),e));
                 break;
         }
         //queue of last 3 events

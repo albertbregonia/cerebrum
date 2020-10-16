@@ -9,5 +9,6 @@ kanin\cerebrum\Main$Connection$2.class
 kanin\cerebrum\utility\Launcher.class
 kanin\cerebrum\server\ServerHandler.class
 kanin\cerebrum\utility\KeyMap.class
+kanin\cerebrum\utility\InputDialog.class
 kanin\cerebrum\server\KeyHandler.class
 kanin\cerebrum\Main$Connection.class

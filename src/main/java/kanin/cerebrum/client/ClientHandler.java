@@ -3,6 +3,7 @@ package kanin.cerebrum.client;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import javafx.application.Platform;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.robot.Robot;
 import kanin.cerebrum.utility.Data;
@@ -41,7 +42,10 @@ public class ClientHandler extends SimpleChannelInboundHandler<Data> {
                     }
                 break;
             case 4: //Simple Typing
-                Platform.runLater(()->bot.keyType(x.getKey().getCode()));
+                if(!x.getMsg().isEmpty())
+                    Platform.runLater(()->bot.keyType(KeyCode.getKeyCode(x.getMsg()))); //Trial method to type text instead of register key combinations
+                else
+                    Platform.runLater(()->bot.keyType(x.getKey().getCode()));
                 break;
         }
         ctx.flush(); //Flush Data
