@@ -46,7 +46,6 @@ public class MouseHandler implements EventHandler<MouseEvent> {
                     }
                     else
                         client.writeAndFlush(new Data(2,e.getButton().name(),null)); //send initial drag
-                    break;
             }
             if(last.get(last.size()-1).equalsIgnoreCase("MOUSE_DRAGGED") && !e.getEventType().getName().equalsIgnoreCase("MOUSE_DRAGGED"))
                 client.writeAndFlush(new Data(3,e.getButton().name(),null)); //send release drag   

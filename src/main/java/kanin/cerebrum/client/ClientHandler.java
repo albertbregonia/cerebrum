@@ -8,6 +8,8 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.robot.Robot;
 import kanin.cerebrum.utility.Data;
 
+import java.util.Vector;
+
 public class ClientHandler extends SimpleChannelInboundHandler<Data> {
     
     public static Robot bot;
@@ -41,12 +43,11 @@ public class ClientHandler extends SimpleChannelInboundHandler<Data> {
                         break;
                     }
                 break;
-            case 4: //Simple Typing
-                if(!x.getMsg().isEmpty())
-                    Platform.runLater(()->bot.keyType(KeyCode.getKeyCode(x.getMsg()))); //Trial method to type text instead of register key combinations
-                else
-                    Platform.runLater(()->bot.keyType(x.getKey().getCode()));
+            case 4: //Press
+                Platform.runLater(()->bot.keyPress(x.getKey().getCode()));
                 break;
+            case 5: //Release
+                Platform.runLater(()->bot.keyRelease(x.getKey().getCode()));
         }
         ctx.flush(); //Flush Data
     }
