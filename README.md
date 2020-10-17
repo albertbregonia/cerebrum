@@ -22,9 +22,9 @@ The main purpose is to allow for a user to be able to connect other computers to
 ## Main Features:
 1. Easy to use, simple GUI.
 2. Able to control up to maximum of 10 simulataneous devices.
-3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JDK 11+](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) is available.
+3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JDK 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
 
-## RELEASE NOTES AS OF OCT. 11
-- Keyboard input is basic, simple yet-buggy typing (70% accuracy), no key combinations (ie. CTRL+ALT+DEL)
+## RELEASE NOTES AS OF OCT. 17
+- Keyboard input is fully functional, 100% accuracy; ***EXCEPT: OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL)***
 - No scrolling functionality (besides mouse wheel click-based scrolling)
-- Currently only works with Java 11+ although it is compiled for Java 8...
+- Currently only works with Java 10+ although it is compiled for Java 8...
