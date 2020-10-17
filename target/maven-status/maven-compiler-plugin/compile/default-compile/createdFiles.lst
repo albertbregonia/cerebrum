@@ -6,7 +6,9 @@ kanin\cerebrum\server\MouseHandler.class
 kanin\cerebrum\Main$Connection$1.class
 kanin\cerebrum\Settings.class
 kanin\cerebrum\Main$Connection$2.class
+kanin\cerebrum\server\ScrollHandler.class
 kanin\cerebrum\utility\Launcher.class
+kanin\cerebrum\server\ScrollHandler$1.class
 kanin\cerebrum\server\ServerHandler.class
 kanin\cerebrum\utility\InputDialog.class
 kanin\cerebrum\server\KeyHandler.class

@@ -7,9 +7,6 @@ import kanin.cerebrum.utility.Data;
 
 import java.util.ArrayList;
 
-import static kanin.cerebrum.Main.clients;
-
-
 public class MouseHandler implements EventHandler<MouseEvent> {
     
     private final ArrayList<String> last = new ArrayList<>(3);

@@ -68,6 +68,7 @@ public class ControlPanel {
         //IO Handlers
         ctrl.addEventHandler(MouseEvent.ANY, new MouseHandler(client));
         ctrl.addEventHandler(KeyEvent.ANY, new KeyHandler(client));
+        ctrl.addEventHandler(ScrollEvent.ANY, new ScrollHandler(client));
         ctrl.setScene(new Scene(layout));
         ctrl.setX(bounds.getMinX());
         ctrl.setY(bounds.getMinY());

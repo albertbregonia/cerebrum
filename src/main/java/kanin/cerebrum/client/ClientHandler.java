@@ -3,12 +3,9 @@ package kanin.cerebrum.client;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import javafx.application.Platform;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.robot.Robot;
 import kanin.cerebrum.utility.Data;
-
-import java.util.Vector;
 
 public class ClientHandler extends SimpleChannelInboundHandler<Data> {
     
@@ -44,10 +41,13 @@ public class ClientHandler extends SimpleChannelInboundHandler<Data> {
                     }
                 break;
             case 4: //Press
-                Platform.runLater(()->bot.keyPress(x.getKey().getCode()));
+                Platform.runLater(()->bot.keyPress(x.getKey()));
                 break;
             case 5: //Release
-                Platform.runLater(()->bot.keyRelease(x.getKey().getCode()));
+                Platform.runLater(()->bot.keyRelease(x.getKey()));
+                break;
+            case 6: //Scroll; multiplied by -1 to invert motion, scroll follows direction of scroll
+                Platform.runLater(()->bot.mouseWheel(-1*Integer.parseInt(x.getMsg())));
         }
         ctx.flush(); //Flush Data
     }
