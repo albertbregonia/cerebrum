@@ -25,6 +25,6 @@ The main purpose is to allow for a user to be able to connect other computers to
 3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JDK 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
 
 ## RELEASE NOTES AS OF OCT. 17
-- Keyboard input is fully functional, 100% accuracy; ***EXCEPT: OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL)***
+- Keyboard input and scrolling is fully functional, 100% accuracy; ***EXCEPT: OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL)***
 - No scrolling functionality (besides mouse wheel click-based scrolling)
 - Currently only works with Java 10+ although it is compiled for Java 8...
