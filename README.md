@@ -15,7 +15,7 @@ The main purpose is to allow for a user to be able to connect other computers to
 
 #### If you know how to port forward, you can ***ALSO*** use this as a remote desktop software if paired with a 3rd-party screen-sharing application.
 
-### Note: If you are to use this software, you must:
+## Requirements:
 - Understand the basic concepts of networking such as IP addresses and ports.
 - Understand that this software works best where the scaling of the host window matches that of the client. 
 
