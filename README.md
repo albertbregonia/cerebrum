@@ -5,7 +5,7 @@
 For some backstory, this was a project that I started in order to dive deeper into learning the capabilities of [JavaFX](https://openjfx.io/). 
 I stumbled upon the `Robot` class that simulates basic user input and sought to have some fun with it. 
 
-![Tool](https://github.com/albertbregonia/MiniChat/blob/master/img/demo.jpg?raw=true "Demo")
+![Tool](https://github.com/albertbregonia/Cerebrum/blob/main/src/main/resources/demo.png?raw=true "Demo")
 
 **Cerebrum** is a Java-based portable tool that is paired with the [Netty API](https://netty.io/) to create a low latency, network-based, 
 mouse/keyboard sharing tool. It is named **Cerebrum** as it can act as a hub for mouse/keyboard input for up to 10 devices. 
@@ -22,7 +22,7 @@ The main purpose is to allow for a user to be able to connect other computers to
 ## Main Features:
 1. Easy to use, simple GUI.
 2. Able to control up to maximum of 10 simulataneous devices.
-3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JDK 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
+3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE/JDK 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
 
 ## RELEASE NOTES AS OF OCT. 17
 - Keyboard input and scrolling is fully functional, 100% accuracy; ***EXCEPT: OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL)***
