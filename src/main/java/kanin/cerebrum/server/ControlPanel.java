@@ -26,7 +26,7 @@ public class ControlPanel {
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
         ctrl.setOpacity(0.2);
         VBox layout = new VBox();
-        layout.setStyle("-fx-background-color: darkblue");
+        layout.setStyle("-fx-background-color: #4081b3");
         layout.setAlignment(Pos.TOP_CENTER);
         
         //Window Size Presets

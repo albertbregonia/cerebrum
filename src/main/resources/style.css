@@ -1,5 +1,21 @@
-.list{
-    -fx-text-alignment: center;
-    -fx-text-fill: white;
-    -fx-font-size: 12px;
+.list-view{
+    -fx-background-color: #4081b3;
+}
+.list-cell {
+    -fx-background-color: #4081b3;
+    -fx-alignment: center;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #f3f3f3;
+}
+.button{
+    -fx-background-color: #4081b3;
+    -fx-text-fill: #f3f3f3;
+    -fx-font-family: Verdana;
+    -fx-background-radius: 5%;
+    -fx-effect: dropshadow(gaussian, #141414, 8, 0, -2, 2)
+}
+.root{
+    -fx-background-color: #141414;
+    -fx-font-family: Verdana;
+    -fx-font-size: 12;
 }
