@@ -17,7 +17,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import kanin.cerebrum.client.ClientHandler;
 import kanin.cerebrum.server.ControlPanel;

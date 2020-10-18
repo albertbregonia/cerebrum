@@ -31,9 +31,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Data> {
                             }
                             else
                                 i++;
-                });
-            });
-        }
+            });});} 
         else
             ctx.channel().close(); //refuse extra connections
     }

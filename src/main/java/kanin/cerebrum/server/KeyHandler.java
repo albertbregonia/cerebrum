@@ -5,7 +5,6 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import kanin.cerebrum.utility.Data;
 
-//--------WIP--------//
 public class KeyHandler implements EventHandler<KeyEvent> {
 
     private final ChannelHandlerContext client;
