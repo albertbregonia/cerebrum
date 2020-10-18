@@ -78,6 +78,7 @@ public class ControlPanel {
         try{ctrl.setTitle(InetAddress.getByName(remote.split(":")[0]).getHostName());} //Try to get device name
         catch(Exception e){ctrl.setTitle(remote);} //Otherwise, just put the remote IP Address
         ctrl.setOnCloseRequest(e->{ //Disconnect on close request
+            ServerHandler.disconnect(client);
             clients.remove(client);
             client.close();
         });

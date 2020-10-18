@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import kanin.cerebrum.client.ClientHandler;
 import kanin.cerebrum.server.ControlPanel;
@@ -34,6 +35,8 @@ public class Main extends Application implements Initializable {
     
     public static final ConcurrentHashMap<ChannelHandlerContext,ControlPanel> clients = new ConcurrentHashMap<>();
     
+    @FXML private ListView<String> list;
+    public static ListView<String> liveConnections;
     
     @FXML private ProgressIndicator status;
     public static ProgressIndicator stat;
@@ -44,6 +47,7 @@ public class Main extends Application implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Pass by references to use value in separate threads
         stat=status;
+        liveConnections=list;
     }
 
     @Override
