@@ -27,6 +27,9 @@ The main purpose is to allow for a user to be able to connect other computers to
 2. Able to control up to maximum of 10 simulataneous devices.
 3. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE/JDK 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
 
+## Installation:
+Please check the [`target`](https://github.com/albertbregonia/Cerebrum/tree/master/target) folder then download and double-click [`Cerebrum-1.0.jar`](https://github.com/albertbregonia/Cerebrum/blob/main/target/Cerebrum-1.0.jar) to run.
+
 ## How to Use:
   #### If you are using the software locally:
   1. Decide what computer will be the *host* or `master` and what port you would like to use.
