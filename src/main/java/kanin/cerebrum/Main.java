@@ -74,15 +74,19 @@ public class Main extends Application implements Initializable {
                 alertMsg("Invalid settings!","Please check your settings before your proceed.", Alert.AlertType.ERROR);
     }
     
-    //Disconnect Button
+    //Disconnect Button - Stops the server if this device is the host or disconnects from host if this device is a client
     @FXML 
     public void disconnect(){disconnect0();}
     
     public static void disconnect0(){
+        Platform.runLater(()->{ //Close all open Control Panels and set the service status to disconnected
+            for(ChannelHandlerContext client:clients.keySet())
+                clients.get(client).getPanel().close();
+            stat.setProgress(0);
+        });
         if(current!=null && current.isAlive())
             current.getConnection().channel().close();
         current=null;
-        Platform.runLater(()->stat.setProgress(0));
     }
 
     //Settings Button
