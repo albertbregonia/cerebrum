@@ -46,6 +46,7 @@ The main purpose is to allow for a user to be able to connect other computers to
       ### ***Ensure that you scale this window to match that of the remote device.***
       In this control panel, all keyboard and mouse data performed on this window will be sent to the respective remote device. That is to say, clicking anywhere on the panel will correspond to a click on the respective remote device at that location (if scaled properly).
   7. Once finished, Click `Disconnect` to stop the server or click on the names of each device on the `Live Connections` window to disconnect them.
+  <br></br>
   #### If you are using the software remotely: ***aka using this as a remote desktop***
   1. Follow the same steps described above, but ensure that the `master` is port-forwarded and that the client enters the external [IP Address](https://whatsmyip.org/) of the `master`.
 
