@@ -8,7 +8,9 @@ I stumbled upon the `Robot` class that simulates basic user input and sought to 
 ![Tool](https://github.com/albertbregonia/Cerebrum/blob/main/src/main/resources/demo.png?raw=true "Demo")
 
 **Cerebrum** is a Java-based portable tool that is paired with the [Netty API](https://netty.io/) to create a low latency, network-based, 
-mouse/keyboard sharing tool. It is named **Cerebrum** as it can act as a hub for mouse/keyboard input for up to 10 devices. 
+mouse/keyboard sharing tool. It is named **Cerebrum** as it can act as a hub for mouse/keyboard input for up to 10 devices.
+
+*If you modify the code you can attempt to connect more than 10 devices. I merely set the limit at 10 to keep the settings slider intelligible.*
 
 The main purpose is to allow for a user to be able to connect other computers together and eliminate the need for extra keyboards and mice. 
 ***Thus overall, increasing productivity.***
