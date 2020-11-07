@@ -1,6 +1,6 @@
 # Cerebrum
 
-## A Mouse/Keyboard Sharing Tool
+## A Mouse and Keyboard Sharing Tool
 
 For some backstory, this was a project that I started in order to dive deeper into learning the capabilities of [JavaFX](https://openjfx.io/). 
 I stumbled upon the `Robot` class that simulates basic user input and sought to have some fun with it. 
@@ -56,7 +56,6 @@ Please check the [`target`](https://github.com/albertbregonia/Cerebrum/tree/mast
   1. Follow the same steps described above, but ensure that the `master` is port-forwarded and that the client enters the external [IP Address](https://whatsmyip.org/) of the `master`.
 
 
-## RELEASE NOTES AS OF OCT. 17
-- Keyboard input and scrolling is fully functional, 100% accuracy; ***EXCEPT: OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL)***
-- No scrolling functionality (besides mouse wheel click-based scrolling)
-- Currently only works with Java 10+ although it is compiled for Java 8...
+## Notes for the current release:
+- OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL) are not functional.
+- Currently only works with Java 10+ although it is compiled for Java 8.
