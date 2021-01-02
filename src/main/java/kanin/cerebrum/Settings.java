@@ -82,9 +82,22 @@ public class Settings implements Initializable {
     private Slider count;
     private static Slider c;
 
-    public static String getIP(){return i.getText().trim();}
+    //Upon Invalid Input, Defaulted to Host
+    public static String getIP(){ 
+        if(i.getText().trim().isEmpty())
+            return "Server";
+        else
+            return i.getText().trim();
+    }
 
-    public static int getPort(){return Integer.parseInt(p.getText().trim());}
+    //Upon Invalid Input, Defaulted to port 54000
+    public static int getPort(){
+        try { 
+            return Integer.parseInt(p.getText().trim());
+        } catch (Exception e) {
+            return 54000;
+        }
+    }
     
     public static boolean isHost(){return h.isSelected();}
     
