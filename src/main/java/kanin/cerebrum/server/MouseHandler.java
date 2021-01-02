@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class MouseHandler implements EventHandler<MouseEvent> {
     
     private final ArrayList<String> last = new ArrayList<>(3);
-    private int ctr=0; //buffer to send mouse movement, setting it to a buffer of 3 decreases input delay
+    private int ctr=0; //buffer to send mouse movement; setting it to a buffer of 3 events decreases input delay
     private final ChannelHandlerContext client;
     
     public MouseHandler(ChannelHandlerContext client){this.client=client;}
@@ -20,12 +20,7 @@ public class MouseHandler implements EventHandler<MouseEvent> {
         if(!last.isEmpty()){ //Ignores the first event, results in NullPointerException if not
             switch(e.getEventType().getName()){
                 case "MOUSE_MOVED":
-                    if(ctr==3){
-                        client.writeAndFlush(new Data(0,(int)e.getSceneX()+","+(int)e.getSceneY(),null));
-                        ctr=0;
-                    }
-                    else 
-                        ctr++;
+                    moveMouse(e);
                     break;
                 case "MOUSE_CLICKED":
                     //if statement included to fix bug where an extra click is simulated after a click and drag
@@ -33,14 +28,8 @@ public class MouseHandler implements EventHandler<MouseEvent> {
                         client.writeAndFlush(new Data(1,e.getButton().name(),null));//simple click
                     break;
                 case "MOUSE_DRAGGED":
-                    if(last.get(last.size()-1).equalsIgnoreCase("MOUSE_DRAGGED")){
-                        if(ctr==3){
-                            client.writeAndFlush(new Data(0,(int)e.getSceneX()+","+(int)e.getSceneY(),null)); //send movement
-                            ctr=0;
-                        } 
-                        else 
-                            ctr++;
-                    }
+                    if(last.get(last.size()-1).equalsIgnoreCase("MOUSE_DRAGGED"))
+                        moveMouse(e);
                     else
                         client.writeAndFlush(new Data(2,e.getButton().name(),null)); //send initial drag
             }
@@ -51,5 +40,14 @@ public class MouseHandler implements EventHandler<MouseEvent> {
         if(last.size()==3) 
             last.remove(0);
         last.add(e.getEventType().getName());
+    }
+    
+    public void moveMouse(MouseEvent e) {
+        if(ctr==3){
+            client.writeAndFlush(new Data(0,(int)e.getSceneX()+","+(int)e.getSceneY(),null));
+            ctr=0;
+        }
+        else
+            ctr++;
     }
 }

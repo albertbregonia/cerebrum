@@ -62,7 +62,7 @@ public class Main extends Application implements Initializable {
     public void connect() throws IOException{
         if(!Settings.isConfigured())
             Settings.startup();
-        if(Settings.isConfigured())
+        if(Settings.isConfigured()) //Check for a successful configuration after initial setup
             if(Settings.isValid()){
                 if (current == null || !current.isAlive()) {
                     current = new Connection(Settings.getIP(), Settings.getPort(), Settings.isHost());

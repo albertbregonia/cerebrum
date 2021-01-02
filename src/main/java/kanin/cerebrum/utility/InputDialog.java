@@ -42,12 +42,9 @@ public class InputDialog implements Initializable {
     @FXML
     public void accept(){
         try{
-            String custom = input.getText();
-            String[] dimension = custom.split("x");
-            dimension[0]=dimension[0].trim();
-            dimension[1]=dimension[1].trim();
-            dimensions[0]=Integer.parseInt(dimension[0]);
-            dimensions[1]=Integer.parseInt(dimension[1]);
+            String[] dimension = input.getText().split("x");
+            dimensions[0]=Integer.parseInt(dimension[0].trim());
+            dimensions[1]=Integer.parseInt(dimension[1].trim());
             window.close();
             valid = true;
         }
