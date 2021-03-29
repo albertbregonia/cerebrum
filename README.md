@@ -17,17 +17,17 @@ The main purpose is to allow for a user to be able to connect other computers to
 
 #### If you know how to port forward, you can ***ALSO*** use this as a remote desktop software if paired with a 3rd-party screen-sharing application.
 
-# Requirements
-- Understand the basic concepts of networking such as IP addresses and ports.
-- Understand the basic concepts of screen resolutions and window scaling.
-- Understand that this software works best where the scaling of the host window matches that of the client.
-- Knowledge of how to port-forward a device. ***\*Only required if you are going to be using this as a remote desktop software***
-
 # Main Features
 1. Easy to use, simple GUI.
 2. Able to control up to maximum of 10 simulataneous devices.
 3. Lightweight and Portable, roughly `18MB` with the single JAR being the only required file
 4. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
+
+# Requirements
+- Understand the basic concepts of networking such as IP addresses and ports.
+- Understand the basic concepts of screen resolutions and window scaling.
+- Understand that this software works best where the scaling of the host window matches that of the client.
+- Knowledge of how to port-forward a device. ***\*Only required if you are going to be using this as a remote desktop software***
 
 # Installation
 Please check the [`target`](https://github.com/albertbregonia/Cerebrum/tree/master/target) folder then download and double-click [`Cerebrum-1.0.jar`](https://github.com/albertbregonia/Cerebrum/blob/main/target/Cerebrum-1.0.jar) to run.
