@@ -17,22 +17,22 @@ The main purpose is to allow for a user to be able to connect other computers to
 
 #### If you know how to port forward, you can ***ALSO*** use this as a remote desktop software if paired with a 3rd-party screen-sharing application.
 
-## Requirements
+# Requirements
 - Understand the basic concepts of networking such as IP addresses and ports.
 - Understand the basic concepts of screen resolutions and window scaling.
 - Understand that this software works best where the scaling of the host window matches that of the client.
 - Knowledge of how to port-forward a device. ***\*Only required if you are going to be using this as a remote desktop software***
 
-## Main Features
+# Main Features
 1. Easy to use, simple GUI.
 2. Able to control up to maximum of 10 simulataneous devices.
 3. Lightweight and Portable, roughly `18MB` with the single JAR being the only required file
 4. Cross Platform - Able to run on Windows, Mac OS X and Linux as long as a [JRE 10+](https://www.oracle.com/java/technologies/java-archive-javase10-downloads.html) is available.
 
-## Installation
+# Installation
 Please check the [`target`](https://github.com/albertbregonia/Cerebrum/tree/master/target) folder then download and double-click [`Cerebrum-1.0.jar`](https://github.com/albertbregonia/Cerebrum/blob/main/target/Cerebrum-1.0.jar) to run.
 
-## How to Use
+# How to Use
   #### If you are using the software locally:
   1. Decide what computer will be the *host* or `master` and what port you would like to use.
   2. Run the software on said computer and click `Connect`. The settings menu will load.
@@ -56,6 +56,6 @@ Please check the [`target`](https://github.com/albertbregonia/Cerebrum/tree/mast
   1. Follow the same steps described above, but ensure that the `master` is port-forwarded and that the client enters the external [IP Address](https://whatsmyip.org/) of the `master`.
 
 
-## Notes for the current release
+# Notes for the current release
 - OS-Exclusive Key Combinations (ie. CTRL+ALT+DEL) are not functional.
 - Currently only works with Java 10+ although it is compiled for Java 8.
