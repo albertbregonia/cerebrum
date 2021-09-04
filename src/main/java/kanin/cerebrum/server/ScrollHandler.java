@@ -3,7 +3,8 @@ package kanin.cerebrum.server;
 import io.netty.channel.ChannelHandlerContext;
 import javafx.event.EventHandler;
 import javafx.scene.input.ScrollEvent;
-import kanin.cerebrum.utility.Data;
+import kanin.cerebrum.utility.Event;
+import kanin.cerebrum.utility.Packet;
 
 public class ScrollHandler implements EventHandler<ScrollEvent> {
     
@@ -16,10 +17,10 @@ public class ScrollHandler implements EventHandler<ScrollEvent> {
         switch(e.getTextDeltaYUnits()){ 
             case LINES:
             case PAGES:
-                client.writeAndFlush(new Data(6,""+(int)e.getTextDeltaY(), null));
+                client.writeAndFlush(new Packet(Event.SCROLL, "" + (int)e.getTextDeltaY()));
                 break;
             case NONE:
-                client.writeAndFlush(new Data(6,""+(int)e.getDeltaY(), null));
+                client.writeAndFlush(new Packet(Event.SCROLL, "" + (int)e.getDeltaY()));
         }
     }
 }

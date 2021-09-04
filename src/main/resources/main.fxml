@@ -13,7 +13,7 @@
       <ProgressIndicator fx:id="status" layoutX="142.0" layoutY="55.0" progress="0.0" />
       <Label fx:id="statusLabel" layoutX="26.0" layoutY="58.0" text="Connection Status" textFill="WHITE" />
       <Button fx:id="settings" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onAction="#openSettings" prefHeight="25.0" prefWidth="150.0" text="Settings" />
-      <ListView fx:id="list" layoutX="196.0" layoutY="88.0" prefHeight="129.0" prefWidth="202.0" />
+      <ListView fx:id="liveConnections" layoutX="196.0" layoutY="88.0" prefHeight="129.0" prefWidth="202.0" />
       <Label fx:id="liveLabel" layoutX="182.0" layoutY="58.0" text="Live Connections - Click to Disconnect" textFill="WHITE" />
    </children>
 </AnchorPane>
