@@ -143,4 +143,5 @@ public class SettingsDialog implements Initializable {
     
     @FXML
     private void cancel() { panel.close(); }
+    
 }

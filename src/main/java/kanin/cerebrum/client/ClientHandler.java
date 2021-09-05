@@ -45,4 +45,5 @@ public class ClientHandler extends SimpleChannelInboundHandler<Packet> {
 
     @Override //Disconnect on error
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception { ctx.close(); }
+    
 }

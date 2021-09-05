@@ -23,7 +23,7 @@ public class Connection extends Thread {
     private final boolean server;
     private ChannelFuture connection;
     
-    public Connection(String ip, int port, boolean server){
+    public Connection(String ip, int port, boolean server) {
         this.ip = ip;
         this.port = port; 
         this.server = server;

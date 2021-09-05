@@ -10,11 +10,11 @@ public class KeyHandler implements EventHandler<KeyEvent> {
 
     private final ChannelHandlerContext client;
 
-    public KeyHandler(ChannelHandlerContext client){this.client=client;}
+    public KeyHandler(ChannelHandlerContext client) { this.client=client; }
     
     @Override  //Send keyboard data to client
     public void handle(KeyEvent e) {
-        switch(e.getEventType().getName()){
+        switch(e.getEventType().getName()) {
             case "KEY_PRESSED":
                 client.writeAndFlush(new Packet(Event.KEY_PRESS, e.getCode().toString()));
                 break;

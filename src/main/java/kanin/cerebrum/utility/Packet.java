@@ -9,7 +9,7 @@ public class Packet implements Serializable {
     private final String msg;
     private final Event event;
 
-    public Packet(Event event, String msg){
+    public Packet(Event event, String msg) {
         this.event = event;
         this.msg = msg;
     }
