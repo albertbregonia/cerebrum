@@ -10,7 +10,7 @@ public class KeyHandler implements EventHandler<KeyEvent> {
 
     private final ChannelHandlerContext client;
 
-    public KeyHandler(ChannelHandlerContext client) { this.client=client; }
+    public KeyHandler(ChannelHandlerContext client) { this.client = client; }
     
     @Override  //Send keyboard data to client
     public void handle(KeyEvent e) {

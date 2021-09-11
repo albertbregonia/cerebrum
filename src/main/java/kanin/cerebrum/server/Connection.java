@@ -18,28 +18,29 @@ import kanin.cerebrum.Main;
 //TCP is used instead of UDP bc many events need to be acknowledged 
 public class Connection extends Thread {
         
-    private final String ip;
+    private String ip;
     private final int port;
-    private final boolean server;
     private ChannelFuture connection;
     
-    public Connection(String ip, int port, boolean server) {
-        this.ip = ip;
-        this.port = port; 
-        this.server = server;
+    public Connection(int port) { this.port = port; }
+
+    public Connection(int port, String ip) {
+        this(port);
+        if(!ip.equalsIgnoreCase("Server"))
+            this.ip = ip;
     }
 
     public ChannelFuture getConnection() { return connection; }
 
     @Override
     public void run() {
-        if(server) { //Create Server
+        if(ip == null) { //Create Server
             EventLoopGroup master = new NioEventLoopGroup(1), 
                            worker = new NioEventLoopGroup();
             try {
                 ServerBootstrap startup = new ServerBootstrap();
                 startup.group(master, worker)
-                .childOption(ChannelOption.TCP_NODELAY, true)
+                .childOption(ChannelOption.TCP_NODELAY, true) 
                 .channel(NioServerSocketChannel.class)
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override protected void initChannel(SocketChannel sc) {
@@ -51,8 +52,7 @@ public class Connection extends Thread {
                 connection = startup.bind(port).sync();
                 Platform.runLater(() -> Main.status_.setProgress(1));
                 connection.channel().closeFuture().sync();
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace(); 
                 Main.disconnectAll();
             } finally {
@@ -67,7 +67,7 @@ public class Connection extends Thread {
                 startup.group(group)
                 .option(ChannelOption.TCP_NODELAY, true)
                 .channel(NioSocketChannel.class).handler(new ChannelInitializer<SocketChannel>() {
-                        @Override protected void initChannel(SocketChannel sc){
+                    @Override protected void initChannel(SocketChannel sc) {
                         sc.pipeline().addLast(new ObjectEncoder());
                         sc.pipeline().addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(Packet.class.getClassLoader())));
                         sc.pipeline().addLast(new ClientHandler());
@@ -76,8 +76,7 @@ public class Connection extends Thread {
                 connection = startup.connect(ip, port).sync();
                 Platform.runLater(() -> Main.status_.setProgress(1));
                 connection.channel().closeFuture().sync();
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace(); 
                 Main.disconnectAll();
             } finally {

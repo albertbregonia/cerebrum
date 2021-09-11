@@ -12,6 +12,7 @@ public class MouseHandler implements EventHandler<MouseEvent> {
     
     private final ArrayList<String> last3Events = new ArrayList<>(3); //used as queue
     private int ctr = 0; //buffer counter to send mouse movement; setting it to a buffer of 3 events decreases input delay
+    //i know this should be done with a UDP connection for better speed but it works well enough
     private final ChannelHandlerContext client;
     
     public MouseHandler(ChannelHandlerContext client) { this.client = client; }

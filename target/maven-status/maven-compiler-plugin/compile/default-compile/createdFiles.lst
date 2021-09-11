@@ -1,17 +1,2 @@
-kanin\cerebrum\client\ClientHandler.class
-kanin\cerebrum\Main.class
-kanin\cerebrum\server\Connection$2.class
 kanin\cerebrum\client\ClientHandler$1.class
-kanin\cerebrum\server\Connection$1.class
-kanin\cerebrum\server\ControlPanel.class
-kanin\cerebrum\server\MouseHandler.class
-kanin\cerebrum\SettingsDialog.class
-kanin\cerebrum\server\Connection.class
-kanin\cerebrum\server\ScrollHandler.class
-kanin\cerebrum\utility\Launcher.class
-kanin\cerebrum\server\ServerHandler.class
 kanin\cerebrum\server\ScrollHandler$1.class
-kanin\cerebrum\utility\InputDialog.class
-kanin\cerebrum\utility\Packet.class
-kanin\cerebrum\server\KeyHandler.class
-kanin\cerebrum\utility\Event.class

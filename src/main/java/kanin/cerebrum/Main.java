@@ -67,7 +67,10 @@ public class Main extends Application implements Initializable {
         if(SettingsDialog.isConfigured()) //Check for a successful configuration after initial setup
             if(SettingsDialog.hasValidAddress()) {
                 if(connection == null || !connection.isAlive()) {
-                    connection = new Connection(SettingsDialog.getIP(), SettingsDialog.getPort(), SettingsDialog.isHost());
+                    if(SettingsDialog.isHost())
+                        connection = new Connection(SettingsDialog.getPort());
+                    else
+                        connection = new Connection(SettingsDialog.getPort(), SettingsDialog.getIP());
                     connection.start();
                     status.setProgress(-1);
                 }
